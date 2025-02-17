@@ -13,4 +13,3 @@ class Calculation:
         """Return the result"""
         # Call the stored operation with a and b
         return self.operation(self.a, self.b)
-    
