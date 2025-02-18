@@ -1,9 +1,13 @@
-from decimal import Decimal
-from typing import Callable, List
+"""
+This module manages the history of calculations performed using the Calculator class.
+"""
+
+from typing import List
 
 from calculator.calculation import Calculation
 
 class Calculations:
+    """Class to manage the history of calculations."""
     history: List[Calculation] = []
 
     @classmethod
@@ -32,4 +36,3 @@ class Calculations:
     def find_by_operation(cls, operation_name: str) -> List[Calculation]:
         """Find and return a list of calculations by operation name."""
         return [calc for calc in cls.history if calc.operation.__name__ == operation_name]
-    
